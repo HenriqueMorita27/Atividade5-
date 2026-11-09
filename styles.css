@@ -1,0 +1,162 @@
+/* Estilos gerais */
+body {
+    background-color: #eaf2fa;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header, footer {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #4da3ff;
+}
+
+main {
+    padding: 0 15px;
+}
+
+/* Formulário responsivo e centralizado */
+form {
+    width: 100%;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border: 2px solid #0066b1;
+    border-radius: 15px;
+}
+
+/* Grupos de campos */
+fieldset {
+    margin-bottom: 18px;
+    padding: 10px 15px 15px 15px;
+    border: 2px solid #9db7cf;
+    border-radius: 8px;
+}
+
+legend {
+    padding: 0 8px;
+    color: #003d6b;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: #003d6b;
+    font-weight: bold;
+}
+
+/* Rádio e checkbox ficam um embaixo do outro, com texto normal */
+.opcao {
+    margin-top: 6px;
+    color: #222222;
+    font-weight: normal;
+}
+
+/* Estilo dos campos (seletores de atributo) */
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=date],
+input[type=file],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0;
+    box-sizing: border-box;
+    border: 2px solid #9db7cf;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #222222;
+    font-size: 16px;
+}
+
+/* Ícones nos campos (background-image) com espaço para o ícone (padding-left) */
+#nome {
+    background-image: url('imagens/usuario.svg');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding-left: 42px;
+}
+
+#email {
+    background-image: url('imagens/email.svg');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding-left: 42px;
+}
+
+/* Campo somente leitura */
+input[readonly] {
+    background-color: #e6e6e6;
+    color: #555555;
+}
+
+/* Textarea só aumenta na vertical */
+textarea {
+    resize: vertical;
+}
+
+/* Efeito ao focar no campo */
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=password]:focus,
+input[type=date]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #0066b1;
+    background-color: #eaf2fa;
+    box-shadow: 0 0 6px #0066b1;
+}
+
+/* Campo inválido (só depois que a pessoa começa a digitar) */
+input:not(:placeholder-shown):invalid {
+    border-color: red;
+}
+
+/* Botões */
+.botoes {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    flex: 1;
+    padding: 12px;
+    background-color: #0066b1;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.limpar {
+    background-color: #666666;
+}
+
+/* Hover nos botões */
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Responsividade: celular */
+@media (max-width: 600px) {
+    form {
+        padding: 12px;
+    }
+
+    .botoes {
+        flex-direction: column;
+    }
+}

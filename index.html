@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- Atividade de HTML e CSS - Formulário de cadastro de aluno -->
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulário de cadastro de aluno.">
+    <meta name="author" content="Henrique">
+
+    <title>Cadastro de Aluno</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Cadastro de Aluno</h1>
+        <p>Preencha os dados abaixo para fazer o seu cadastro.</p>
+    </header>
+
+    <main>
+
+        <!-- action: para onde vão os dados | method: como são enviados
+             target: onde a resposta aparece | autocomplete: preenchimento automático -->
+        <form action="#" method="post" target="_self" autocomplete="on">
+
+            <!-- label for + input id: o label fica ligado ao campo. name: nome do dado enviado -->
+            <fieldset>
+                <legend>Dados pessoais</legend>
+
+                <label for="nome">Nome completo</label>
+                <input type="text" id="nome" name="usuarioNome" placeholder="Digite seu nome"
+                       required minlength="3" maxlength="50" pattern="[A-Za-zÀ-ÿ ]{3,50}"
+                       title="Use apenas letras (de 3 a 50 caracteres)">
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="usuarioEmail" placeholder="exemplo@email.com" required>
+
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="usuarioSenha" placeholder="De 6 a 20 caracteres"
+                       required minlength="6" maxlength="20">
+
+                <label for="nascimento">Data de nascimento</label>
+                <input type="date" id="nascimento" name="usuarioNascimento" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Dados do curso</legend>
+
+                <!-- value: valor inicial | readonly: só leitura -->
+                <label for="instituicao">Instituição</label>
+                <input type="text" id="instituicao" name="usuarioInstituicao" value="UniFil" readonly>
+
+                <label for="curso">Curso</label>
+                <select id="curso" name="usuarioCurso" required>
+                    <option value="">Selecione um curso</option>
+                    <option value="engenharia-software">Engenharia de Software</option>
+                    <option value="ciencia-computacao">Ciência da Computação</option>
+                    <option value="sistemas-informacao">Sistemas de Informação</option>
+                    <option value="outro">Outro</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Sexo</legend>
+                <label class="opcao"><input type="radio" name="usuarioSexo" value="masculino" required> Masculino</label>
+                <label class="opcao"><input type="radio" name="usuarioSexo" value="feminino"> Feminino</label>
+                <label class="opcao"><input type="radio" name="usuarioSexo" value="nao-informar"> Prefiro não informar</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Interesses</legend>
+                <label class="opcao"><input type="checkbox" name="usuarioInteresses" value="programacao"> Programação</label>
+                <label class="opcao"><input type="checkbox" name="usuarioInteresses" value="jogos"> Jogos</label>
+                <label class="opcao"><input type="checkbox" name="usuarioInteresses" value="carros"> Carros</label>
+                <label class="opcao"><input type="checkbox" name="usuarioInteresses" value="musica"> Música</label>
+                <label class="opcao"><input type="checkbox" name="usuarioInteresses" value="outros"> Outros</label>
+                 <textarea id="comentarios" name="usuarioComentarios" rows="4" maxlength="300"
+                          placeholder="Escreva aqui os interesses que você tem"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Outras informações</legend>
+
+                <label for="comentarios">Comentários</label>
+                <textarea id="comentarios" name="usuarioComentarios" rows="4" maxlength="300"
+                          placeholder="Escreva aqui o que quiser"></textarea>
+
+                <label for="foto">Foto de perfil</label>
+                <input type="file" id="foto" name="usuarioFoto" accept="image/*">
+            </fieldset>
+
+            <div class="botoes">
+                <button type="submit">Enviar</button>
+                <button type="reset" class="limpar">Limpar</button>
+            </div>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <p>Formulario feito por Henrique Morita.</p>
+    
+    </footer>
+
+</body>
+
+</html>
